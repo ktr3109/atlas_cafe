@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe Atlas</title>
+  <meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./js/script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="g-navi">
+      <div class="container nav-wrapper">
+        <ul>
+          <li class="nav-item"><a href="index.html">TOP</a></li>
+          <li class="nav-item"><a href="#feature">FEATURE</a></li>
+          <li class="nav-item"><a href="#thought">THOUGHT</a></li>
+          <li class="nav-item"><a href="#lineup">LINE UP</a></li>
+          <li class="nav-item"><a href="#store">STORE</a></li>
+          <li class="nav-item"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="g-navi-sp">
+      <div class="sp-logo">
+        <p class="logo-title">Cafe Atlas</p>
+      </div>
+      <div class="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <section id="contact">
+    <div class="container">
+      <div class="title">
+        <h2>Contact</h2>
+        <p class="ja-title">お問い合わせ</p>
+      </div>
+      <form action="index.php" method="post">
+        <div class="ct-block">
+          <label class="contact-text" for="name">お名前</label>
+          <input type="text" name="yourname" placeholder="例：田中太郎" class="form-name">
+        </div>
+        <div class="ct-block">
+          <label class="contact-text" for="email">メールアドレス</label>
+          <input type="text" name="mail" placeholder="例：xxxxx@△△△△△.com" class="form-mail">
+        </div>
+        <div class="ct-block">
+          <label for="main" class="contact-text">主なご用件</label>
+          <div class="cp-howto">
+            <select name="main-request" required>
+              <option value="" hidden>ご選択ください</option>
+              <option value="1">お店の予約について</option>
+              <option value="2">宅配サービスについて</option>
+              <option value="3">商品について</option>
+              <option value="4">社員採用について</option>
+            </select>
+          </div>
+        </div>
+        <div class="ct-block">
+          <label for="request-about" class="contact-text">お問い合わせ内容</label>
+          <textarea name="request-about" id="request-about" cols="60" rows="6" placeholder="ここに記入して下さい"></textarea>
+        </div>
+        <input class="send-button" type="submit" value="送信">
+      </form>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo-wrapper">
+          <a href="#" class="logo">cake shop</a>
+          <div class="sns-block">
+            <a class="mark" href="https://twitter.com/" target="_blank">
+              <img class="sns-mark" src="./image/twitter.png" alt="twitter">
+            </a>
+            <a class="mark" href="https://www.facebook.com/" target="_blank">
+              <img class="sns-mark" src="./image/facebook.png" alt="facebook">
+            </a>
+            <a class="mark" href="https://www.instagram.com/" target="_blank">
+              <img class="sns-mark" src="./image/instagram.png" alt="instagram">
+            </a>
+          </div>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#feature">FEATURE</a></li>
+            <li><a href="#thought">THOUGHT</a></li>
+            <li><a href="#lineup">LINE UP</a></li>
+            <li><a href="#store">STORE</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">特定商取引法について</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <small>
+        Copyright © 2021 LULL inc. All Rights Reserved.
+      </small>
+    </div>
+  </footer>
+</body>
+</html>
