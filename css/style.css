@@ -35,7 +35,7 @@ h1{
   color: #fff;
   font-weight: normal;
 }
-#concept, #news, #thought, #cakelife, #lineup, #package, #store, #contact{
+#concept, #news, #thought, #cakelife, #menu, #package, #store, #contact{
   padding:80px 0;
 }
 h2{
@@ -61,7 +61,7 @@ h2{
 .box-design{
   background-color: #fff;
 }
-.news-wrapper, .life-wrapper, .lineup-wrapper, .package-wrapper, .store-wrapper{
+.news-wrapper, .life-wrapper, .menu-wrapper, .package-wrapper, .store-wrapper{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -184,35 +184,45 @@ select::-ms-expand {
 */
 
 .news-box{
+  width: 230px;
   max-width: 250px;
-  background-color: rgba(0,0,0,.3);
-}
 
+}
+.news-box a{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
 .news-number{
   font-size: .75rem;
   letter-spacing: 2px;
   font-family: 'Prata', cursive;
-  color:#eee;
 }
 .news-title{
-  font-size: 1.375rem;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: normal;
   margin-top: 5px;
-  margin-bottom: 5px;
-  color:#eee;
+  text-decoration: underline dotted;
 }
-.news-box a:hover .news-title{
-  text-decoration: underline;
-  opacity: .5;
+.news-box a:hover img{
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.3);
+  transform: scale(0.95);
+}
+.news-box a:hover .news-text{
+  transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+  color: #ccc;
 }
 .news-text{
   padding: 0 10px;
+  color:#401801;
 }
 .news-about{
   font-size: 1rem;
 }
 .news-image{
   max-width: 100%;
+  border-radius: 5px;
 }
 
 /* 想いエリア */
@@ -350,39 +360,42 @@ select::-ms-expand {
   background-color: #ff5a33;
 }
 
-/* ラインナップエリア */
-.lineup-menu{
+/* menu */
+#menu{
+  background-color: #697366;
+}
+.menu-menu{
   margin-bottom: 3rem;
 }
-.lineup-menu ul{
+.menu-menu ul{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   border-bottom: 2px solid #401801;
 }
-.lineup-menu ul li{
+.menu-menu ul li{
   width: 100%;
   text-align: center;
 }
-.lineup-menu ul li a{
+.menu-menu ul li a{
   display: block;
   color: #333;
   background-color: #d1d1d1;
   border-radius: 30px 30px 0 0;
   padding: 0.5rem 0;
 }
-.lineup-menu ul li a:hover{
+.menu-menu ul li a:hover{
   color: #fff;
   background-color: #401801;
 }
-.lineup-menu ul li.active a{
+.menu-menu ul li.active a{
   color: #fff;
   background-color: #401801;
 }
-.lineup-product{
+.menu-product{
   flex-basis: 31%;
 }
-.lineup-image{
+.menu-image{
   border-radius: 30px;
   border: 1px dashed #401801;
   padding: 4rem 0;
@@ -393,10 +406,10 @@ select::-ms-expand {
   font-size: 1.5rem;
   font-weight: bold;
 }
-.lineup-text{
+.menu-text{
   line-height: 1.8;
 }
-.more-lineup{
+.more-menu{
   text-align: center;
   margin-top: 60px;
 }
@@ -418,7 +431,7 @@ select::-ms-expand {
 #package{
   background:#f6e2c1;
 }
-.package-lineup{
+.package-menu{
   flex-basis: 31%;
 }
 .package-image{
@@ -497,8 +510,9 @@ address{
 }
 
 /* お問い合わせエリア */
+/* #697366 #624649 #BFAF9B #401801 #8C5B3F */
 #contact{
-background:#401801;
+background:#697366;
 }
 #contact h2,
 #contact .ja-title {
@@ -577,15 +591,27 @@ textarea{
 
 /* フッターエリア */
 footer{
-  background: #3a3532;
+  position: relative;
+  background: bottom / cover no-repeat url("../image/footer.png") fixed;
   color:#fff;
 }
+footer::after {
+  content: '';
+  background-color: rgba(0,0,0,.75);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 .footer-content{
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
   margin: 0 auto;
   padding: 40px 0;
+  z-index: 1;
 }
 .footer-content a{
   color:#fff;
@@ -638,7 +664,7 @@ footer small{
     letter-spacing: 3px;
     text-align: center;
   }
-  #concept, #news, #thought, #cakelife, #lineup, #package, #store, #contact{
+  #concept, #news, #thought, #cakelife, #menu, #package, #store, #contact{
     padding:60px 0;
   }
   .g-navi {
@@ -789,33 +815,33 @@ footer small{
     padding: 0;
   }
   /* ラインナップエリア */
-  .lineup-menu{
+  .menu-menu{
     margin-bottom: 0;
   }
-  .lineup-menu ul{
+  .menu-menu ul{
     flex-wrap: wrap;
     border-bottom: none;
   }
-  .lineup-menu ul li{
+  .menu-menu ul li{
     flex-basis: 50%;
     border-bottom: 2px solid #401801;
     margin-bottom: 20px;
   }
-  .lineup-menu ul li a{
+  .menu-menu ul li a{
     border-radius: 20px 20px 0 0;
     padding: 6px 0;
   }
-  .lineup-wrapper{
+  .menu-wrapper{
     flex-wrap: wrap;
   }
-  .lineup-product{
+  .menu-product{
     flex-basis: 100%;
     margin-bottom: 40px;
   }
-  .lineup-image{
+  .menu-image{
     padding: 3rem 0;
   }
-  .more-lineup{
+  .more-menu{
     margin-top: 0;
   }
 
@@ -823,11 +849,11 @@ footer small{
   .package-wrapper{
     flex-wrap: wrap;
   }
-  .package-lineup{
+  .package-menu{
     flex-basis: 100%;
     margin-bottom: 60px;
   }
-  .package-lineup:last-child{
+  .package-menu:last-child{
     margin-bottom: 0;
   }
   /* 店舗情報エリア */

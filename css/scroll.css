@@ -10,9 +10,9 @@
 
 /*下からの距離が変化して全体が下→上→下に動く*/
 @keyframes arrowmove{
-      0%{bottom:1%;}
-      50%{bottom:3%;}
-     100%{bottom:1%;}
+      0%{bottom:3%;}
+      50%{bottom:5%;}
+     100%{bottom:3%;}
  }
 
 /*Scrollテキストの描写*/

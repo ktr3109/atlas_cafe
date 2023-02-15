@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafe Atlas</title>
+  <title>Cafe Atlas | MENU</title>
   <meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。" />
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/reset.css">
@@ -40,41 +40,65 @@
       </div>
     </nav>
   </header>
-  <section id="contact">
+  <section id="menu">
     <div class="container">
       <div class="title">
-        <h2>Contact</h2>
-        <p class="ja-title">お問い合わせ</p>
+        <h2>Line up</h2>
+        <p class="ja-title">シチュエーション別のおすすめ</p>
       </div>
-      <form action="index.php" method="post">
-        <div class="ct-block">
-          <label class="contact-text" for="name">お名前</label>
-          <input type="text" name="yourname" placeholder="例：田中太郎" class="form-name">
-        </div>
-        <div class="ct-block">
-          <label class="contact-text" for="email">メールアドレス</label>
-          <input type="text" name="mail" placeholder="例：xxxxx@△△△△△.com" class="form-mail">
-        </div>
-        <div class="ct-block">
-          <label for="main" class="contact-text">主なご用件</label>
-          <div class="cp-howto">
-            <select name="main-request" required>
-              <option value="" hidden>ご選択ください</option>
-              <option value="1">お店の予約について</option>
-              <option value="2">宅配サービスについて</option>
-              <option value="3">商品について</option>
-              <option value="4">社員採用について</option>
-            </select>
+      <div class="menu-menu">
+        <ul class="filter">
+          <li class="menu-tab active" data-filter="ranking"><a class="ranking" href="#">ranking</a></li>
+          <li class="menu-tab" data-filter="tea"><a class="tea" href="#">tea time</a></li>
+          <li class="menu-tab" data-filter="party"><a class="party" href="#">party</a></li>
+          <li class="menu-tab" data-filter="gifts"><a class="gifts" href="#">gifts</a></li>
+          <li class="menu-tab" data-filter="season"><a class="season" href="#">season</a></li>
+        </ul>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-product tea" data-category="tea">
+          <div class="menu-image">
+            <img src="./image/cake01.png" alt="タルト">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-en">Tart</span>
+              <span class="name-ja">タルト</span>
+            </div>
+            <p class="menu-text about-text">タルト生地の香ばしさがいちごを引き立てる逸品。</p>
           </div>
         </div>
-        <div class="ct-block">
-          <label for="request-about" class="contact-text">お問い合わせ内容</label>
-          <textarea name="request-about" id="request-about" cols="60" rows="6" placeholder="ここに記入して下さい"></textarea>
+        <div class="menu-product party" data-category="party">
+          <div class="menu-image">
+            <img src="./image/cake02.png" alt="ショートケーキ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-en">Short cake</span>
+              <span class="name-ja">ショートケーキ</span>
+            </div>
+            <p class="menu-text about-text">ケーキの王様。こだわりの王道をめしあがれ。</p>
+          </div>
         </div>
-        <input class="send-button" type="submit" value="送信">
-      </form>
+        <div class="menu-product gifts" data-category="gifts">
+          <div class="menu-image">
+            <img src="./image/cake03.png" alt="チョコレート">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-en">Chocolate</span>
+              <span class="name-ja">チョコレート</span>
+            </div>
+            <p class="menu-text about-text">チョコレートとフルーツのハーモニーを楽しめる一品。</p>
+          </div>
+        </div>
+      </div>
+      <div class="more-menu">
+        <a href="#" class="btn-more">more</a>
+      </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <div class="footer-content">
