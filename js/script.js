@@ -1,3 +1,25 @@
+//スクロールでheaderに色をつける
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 0) {
+    $('nav.g-navi,.g-navi ul li a').addClass('scrolled');
+  } else {
+    $('nav.g-navi,.g-navi ul li a').removeClass('scrolled');
+  }
+});
+
+//スムーススクロール
+$(document).ready(function() {
+  $('nav.g-navi a[href^="#"]').click(function() {
+    var target = $($(this).attr('href'));
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top - 80
+      }, 1000);
+      return false;
+    }
+  });
+});
+
 // ハンバーガーメニュー
 $(function () {
   $('.menu-trigger').click(function () {
