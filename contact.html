@@ -9,6 +9,7 @@
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
@@ -22,7 +23,12 @@
         <ul>
           <li class="nav-item"><a href="index.html">TOP</a></li>
           <li class="nav-item"><a href="index.html#news">NEWS</a></li>
-          <li class="nav-item"><a href="menu.html">MENU</a></li>
+          <li class="nav-item"><p class="accordion-title">MENU</p>
+            <ul class="accordion-content">
+              <li class="accordion-lists"><a href="menu.html">Drinks</a></li>
+              <li class="accordion-lists"><a href="menu.html">Foods</a></li>
+            </ul>
+          </li>
           <li class="nav-item"><a href="index.html#store">STORE</a></li>
           <li class="nav-item"><a href="contact.html">CONTACT</a></li>
         </ul>
@@ -60,11 +66,15 @@
             <select name="main-request" required>
               <option value="" hidden>ご選択ください</option>
               <option value="1">お店の予約について</option>
-              <option value="2">宅配サービスについて</option>
-              <option value="3">商品について</option>
+              <option value="2">メニューについて</option>
+              <option value="3">店舗について</option>
               <option value="4">社員採用について</option>
             </select>
           </div>
+        </div>
+        <div class="ct-block">
+          <label for="main" class="contact-text">ご予約希望日</label>
+          <input type="date" name="event-date" class="form-event-date">
         </div>
         <div class="ct-block">
           <label for="request-about" class="contact-text">お問い合わせ内容</label>

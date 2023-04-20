@@ -1,9 +1,11 @@
 @charset "UTF-8";
-
 /*
 カラーコード : #697366 #BFAF9B #BFAF9B #401801 #8C5B3F
 */
-/* 共通パーツ */
+
+/*************************
+共通パーツ
+**************************/
 html{
   font-size: 16px;
 }
@@ -17,10 +19,18 @@ ul,li,ol{
 }
 a{
   text-decoration: none;
-  transition: 0.6s;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 a:hover{
-  transition: 0.6s;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
 }
 .container{
   max-width: 1024px;
@@ -39,7 +49,7 @@ h1 span{
   letter-spacing: 5px;
   font-size: 1.2rem;
 }
-#concept, #news, #thought, #cakelife, #menu, #package, #store, #contact{
+#concept, #news, #menu, #package, #store, #contact{
   padding:80px 0;
 }
 h2{
@@ -58,29 +68,15 @@ h2{
   text-align: center;
   margin-bottom: 40px;
 }
-.about-text{
-  font-size: 1rem;
-  letter-spacing: 0.8px;
-}
-.box-design{
-  background-color: #fff;
-}
-.news-wrapper, .life-wrapper, .menu-wrapper, .package-wrapper, .store-wrapper{
+.news-wrapper, .package-wrapper, .store-wrapper{
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-select {
-  -moz-appearance: menulist;
-  -webkit-appearance: menulist;
-  border-style: solid;
-  height: 28px;
-}
-select::-ms-expand {
-    display: block;
-}
 
-/*** グローバルナビゲーション ***/
+/*************************
+グローバルナビゲーション
+**************************/
 header {
   position: fixed;
   top: 0;
@@ -116,38 +112,141 @@ nav.scrolled {
   flex-basis: 16.6%;
   text-align: center;
 }
-.g-navi ul li a{
+.g-navi ul li a,
+.g-navi ul li p{
   display: block;
   color: #fff;
   padding: 20px 0;
 }
-.g-navi ul li a.scrolled{
+.g-navi ul li a.scrolled,
+.g-navi ul li p.scrolled{
   display: block;
   color: #000;
 }
 
-
-
 /* 「メニューテキスト」にマウスオンした際のデザイン */
 .g-navi ul li a:hover,
+.g-navi ul li p:hover,
 .g-navi ul li a.scrolled:hover{
   color: #401801;
   background: rgba(255, 255, 255, 0.5);
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.g-navi ul li p{
+transition: 0.5s;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+-o-transition: 0.5s;
 }
 
-/* メインビジュアル */
+/*アコーディオンメニュー*/
+.accordion-title {
+  position: relative;
+  margin: 0;
+  font-weight: normal;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px 0;
+}
+.accordion-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  width: 10px;
+  height: 1px;
+  transform: rotate(180deg);/*線を縦にする*/
+  background: #fff;
+  transition: all .3s ease-in-out;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  opacity: 0;/*見えない状態の横線*/
+  width: 10px;
+  height: 1px;
+  background: #fff;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+.accordion-title:hover::before,
+.accordion-title:hover::after,
+.accordion-title.scrolled::before,
+.accordion-title.scrolled::after,
+.accordion-title.active:hover::before,
+.accordion-title.active:hover::after {
+  background: #401801;
+}
+.accordion-title.active::before {
+  background: #fff;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+.accordion-title.active::after {
+  background: #fff;
+  opacity: 1;
+}
+ul.accordion-content {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  color: #401801;
+  width: 100%;
+  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+}
+ul.accordion-content.scrolled {
+  background: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+}
+.accordion-content .accordion-lists{
+  text-align: left;
+}
+.accordion-content .accordion-lists a{
+  padding: 20px 0 20px 40px;
+  width: 100%;
+  display: block;
+  color: #fff;
+}
+.accordion-content .accordion-lists a::before {
+  content: "●";
+  position: absolute;
+  left: 20px;
+}
+
+/*************************
+メインビジュアル
+**************************/
 #main-visual{
   background-image:url(../image/mv.png);
   background-repeat:no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 95vh;
-  /* max-height: 633px; */
 }
 .mv-wrapper{
   position: relative;
@@ -159,7 +258,6 @@ nav.scrolled {
   max-width: 100%;
   text-align: center;
 }
-
 .text{
   font-size: 1rem;
   padding: 10px 0;
@@ -171,38 +269,15 @@ nav.scrolled {
   border-bottom: 1px solid #fff;
 }
 
-/* コンセプトエリア */
-#concept{
-  background-color: #BFAF9B;
-  background-image: url(../image/back1.png),
-                    url(../image/back2.png);
-  background-size: 22%,22%;
-  background-repeat: no-repeat;
-  background-position: 0 0, 100% 100%;
-  text-align: center;
-}
-.concept-copy{
-  text-align: center;
-}
-.main-copy{
-  font-size: 1.5rem;
-  margin-bottom: 50px;
-  font-weight: normal;
-}
-.concept-text{
-  margin-bottom: 20px;
-  line-height: 1.8;
-}
-
-/* お知らせエリア */
+/*************************
+お知らせエリア
+**************************/
 #news{
   background-color: #697366;
 }
-
 .news-box{
   width: 230px;
   max-width: 250px;
-
 }
 .news-box a{
   display: inline-block;
@@ -219,7 +294,6 @@ nav.scrolled {
   font-weight: normal;
   margin-top: 5px;
 }
-
 .news-box a img{
   transition: .4s;
   transform: scale(1);
@@ -249,209 +323,9 @@ nav.scrolled {
 }
 
 
-/* 想いエリア */
-#thought{
-  background-color: #401801;
-}
-#thought h2, #thought .ja-title {
-  color:#fff;
-}
-.thought-container{
-  position: relative;
-}
-.staff-box{
-  display: none;
-}
-.staff-box.active{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content:space-between;
-  background:#fff0af;
-  padding: 2rem;
-}
-.staff-image{
-  display: block;
-  width: 48%;
-}
-.staff-text{
-  width: 48%;
-}
-.staff-title{
-  font-size: 1.375rem;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: normal;
-}
-.staff-about{
-  margin-bottom: 20px;
-  padding: 20px;
-  background:#fff;
-}
-.staff-name{
-  text-align: right;
-}
-.slide-button{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  display: block;
-  width: 48px;
-  height: 48px;
-  border-top: 2px solid #c0c0c0;
-  margin: auto;
-  cursor: pointer;
-  z-index: 1;
-}
-.prev {
-  left: 10px;
-  border-left: 2px solid #c0c0c0;
-  transform: rotate(-45deg);
-}
-.next {
-  right: 10px;
-  border-right: 2px solid #c0c0c0;
-  transform: rotate(45deg);
-}
-/* ライフエリア */
-#cakelife{
-  background: linear-gradient(#f7e3c0, #fff0af);
-}
-.life-type{
-  text-align: center;
-}
-.life-img{
-  width: 100%;
-  margin-bottom: 5px;
-}
-.life-type a{
-  display: block;
-  padding: 10px;
-  color: #333;
-}
-.life-type a:hover{
-  color: #401801;
-  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-}
-/* モーダル */
-.modal-main{
-  display: none;
-}
-.modal-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  color: #666666;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-.inner-content{
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  max-width: 1024px;
-}
-.modal-inner img{
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-}
-.inner-title{
-  margin-top: 40px;
-  margin-bottom: 32px;
-  font-size: 2.8rem;
-  font-weight: bold;
-}
-.inner-text{
-  font-size: 1.6rem;
-  width: 70%;
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.modalClose{
-  cursor: pointer;
-}
-#cakelife .send-button {
-  background-color: #401801;
-  color: #fff;
-}
-#cakelife .send-button:hover {
-  background-color: #ff5a33;
-}
-
-/* menu */
-#menu{
-  background-color: #697366;
-}
-.menu-items{
-  margin-bottom: 3rem;
-}
-.menu-items ul{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  border-bottom: 2px solid #401801;
-}
-.menu-items ul li{
-  width: 100%;
-  text-align: center;
-}
-.menu-items ul li a{
-  display: block;
-  color: #333;
-  background-color: #d1d1d1;
-  border-radius: 30px 30px 0 0;
-  padding: 0.5rem 0;
-}
-.menu-items ul li a:hover{
-  color: #fff;
-  background-color: #401801;
-}
-.menu-items ul li.active a{
-  color: #fff;
-  background-color: #401801;
-}
-.menu-product{
-  flex-basis: 31%;
-}
-.menu-image{
-  border-radius: 30px;
-  border: 1px dashed #401801;
-  padding: 4rem 0;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.name-en{
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.menu-text{
-  line-height: 1.8;
-}
-.more-menu{
-  text-align: center;
-  margin-top: 60px;
-}
-.btn-more{
-  display: inline-block;
-  background-color: #401801;
-  color: #fff;
-  border: #401801 solid 1px;
-  padding: 10px 100px;
-  font-size: 1.375rem;
-  letter-spacing: 3px;
-}
-.btn-more:hover{
-  background-color: #fff;
-  color: #401801;
-}
-
-/* パッケージエリア */
+/*************************
+パッケージエリア
+**************************/
 #package{
   background:#f6e2c1;
 }
@@ -507,14 +381,12 @@ nav.scrolled {
   transition: 0s;
 }
 
-/* 店舗情報エリア */
+/*************************
+店舗(ストア)情報エリア
+**************************/
 #store{
-  background: #BFAF9B;
+  background: #eee;
 }
-/*
-カラーコード : #697366 #BFAF9B #BFAF9B #401801 #8C5B3F
-
-*/
 .map-image, .cafe-text{
   flex-basis: 48%;
 }
@@ -533,87 +405,10 @@ address{
   color: #624649;
 }
 
-/* お問い合わせエリア */
-/* #697366 #624649 #BFAF9B #401801 #8C5B3F */
-#contact{
-background:#697366;
-}
-#contact h2,
-#contact .ja-title {
-  color: #fff;
-}
-form{
-  margin: 0 auto;
-  max-width: 500px;
-}
-.ct-block{
-  margin-bottom: 32px;
-}
-.contact-text{
-  display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
-}
-.form-name, .form-mail, .cp-howto select{
-  border: 1px solid #b1b1b1;
-  width: 100%;
-  height: 40px;
-  padding: 0 10px;
-  background: #fff;
-}
-textarea{
-  border: 1px solid #b1b1b1;
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  background: #fff;
-}
-.cp-howto {
-  position: relative;
-  border: 1px solid #b1b1b1;
-  background: #fff;
-}
-/*「▼」をつける部分になります */
-.cp-howto::before {
-  position: absolute;
-  top: 14px;
-  right: 10px;
-  content: '';
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
-  border-top: 13px solid #666;
-}
-.cp-howto select {
-  border: none;
-  outline: none;
-  background: transparent;
-  background-image: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 10px 40px 10px 10px;
-}
- /* Internet Explorer用の記述 */
-.cp-howto select::-ms-expand {
-  display: none;
-}
-.send-button{
-  display: block;
-  background-color: #fff;
-  font-size: 1.375rem;
-  padding: 10px 120px;
-  margin: 0 auto;
-  color: #401801;
-  transition: 0.6s;
-}
-.send-button:hover{
-  background-color: #BFAF9B;
-  color: #401801;
-  transition: 0.6s;
-}
 
-/* フッターエリア */
+/*************************
+フッターエリア
+**************************/
 footer{
   position: relative;
   background: bottom / cover no-repeat url("../image/footer.png") fixed;
@@ -646,10 +441,9 @@ footer::after {
 .logo-wrapper{
   flex-grow: 2;
 }
-.menu{
+.footer-menu{
   flex-grow: 1;
 }
-/* ロゴ */
 .logo{
   display: block;
   font-size:3rem;
@@ -674,15 +468,32 @@ footer::after {
 .mark img{
   width: 30px;
 }
-.menu ul li{
+.footer-menu ul li{
   letter-spacing: 2px;
   margin-bottom: 20px;
+}
+.footer-menu ul li p{
+  margin-bottom: 20px;
+}
+.footer-menu-contents li{
+  padding-left: 30px;
+}
+.footer-menu-contents li a::before {
+  content: "●";
+  position: relative;
+  left: -10px;
 }
 footer small{
   padding-bottom: 20px;
   display: block;
   text-align: center;
 }
+
+
+/*************************
+以下、スマホ用CSS
+**************************/
+
 @media screen and (max-width:768px){
 
   /* 共通パーツ */
@@ -907,7 +718,9 @@ footer small{
   address{
     line-height: 2.4;
   }
-   /* フッターエリア */
+
+
+  /* フッターエリア */
   .footer-content{
     text-align: center;
     flex-wrap: wrap;
@@ -924,14 +737,14 @@ footer small{
     justify-content: center;
     margin-bottom: 40px;
   }
-  .menu{
+  .footer-menu{
     flex-basis: 100%;
     margin-bottom: 20px;
   }
-  .menu:last-child{
+  .footer-menu:last-child{
     margin-bottom: 0;
   }
-  .menu ul li{
+  .footer-menu ul li{
     margin-bottom: 10px;
   }
 }

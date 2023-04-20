@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cafe Atlas | MENU-Drinks</title>
+<meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。" />
+<link rel="icon" href="favicon.ico" />
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./js/script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="g-navi">
+      <div class="container nav-wrapper">
+        <ul>
+          <li class="nav-item"><a href="index.html">TOP</a></li>
+          <li class="nav-item"><a href="index.html#news">NEWS</a></li>
+          <li class="nav-item"><p class="accordion-title">MENU</p>
+            <ul class="accordion-content">
+              <li class="accordion-lists"><a href="menu-drinks.html">Drinks</a></li>
+              <li class="accordion-lists"><a href="menu-foods.html">Foods</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="index.html#store">STORE</a></li>
+          <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="g-navi-sp">
+      <div class="sp-logo">
+        <p class="logo-title">Cafe Atlas</p>
+      </div>
+      <div class="menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <section id="menu">
+    <div class="container">
+      <div class="title">
+        <h2>Drinks</h2>
+        <p class="ja-title">お飲み物</p>
+      </div>
+      <div class="menu-items">
+        <ul class="filter">
+          <li class="menu-tab active" data-filter="all"><a class="all" href="#">All</a></li>
+          <li class="menu-tab" data-filter="coffee"><a class="coffee" href="#">Coffee</a></li>
+          <li class="menu-tab" data-filter="softdrink"><a class="food" href="#">Soft drink</a></li>
+        </ul>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-product coffee" data-category="coffee">
+          <div class="menu-image">
+            <img src="./image/menu/houseblend.png" alt="ブレンド">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">ハウスブレンド</span>
+              <span class="name-en">House Blend</span>
+            </div>
+            <p class="menu-text about-text">Atlasの定番ブレンド。深みのあるコクと、程よい酸味が特徴で、どんなシチュエーションでも合わせやすい味わいです。</p>
+          </div>
+        </div>
+        <div class="menu-product coffee" data-category="coffee">
+          <div class="menu-image">
+            <img src="./image/menu/espresso.png" alt="エスプレッソブレンド">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">エスプレッソブレンド</span>
+              <span class="name-en">Espresso Blend</span>
+            </div>
+            <p class="menu-text about-text">濃厚なエスプレッソにぴったりのブレンド。深いローストが特徴で、苦味とコクが絶妙にマッチした味わいが楽しめます。</p>
+          </div>
+        </div>
+        <div class="menu-product coffee" data-category="coffee">
+          <div class="menu-image">
+            <img src="./image/menu/decaf.png" alt="デカフェ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">デカフェ</span>
+              <span class="name-en">Decaf Blend</span>
+            </div>
+            <p class="menu-text about-text">カフェインレスのブレンド。まろやかな味わいで、夜遅くまでコーヒーを楽しみたい方におすすめです。</p>
+          </div>
+        </div>
+        <div class="menu-product coffee" data-category="coffee">
+          <div class="menu-image">
+            <img src="./image/menu/latte.png" alt="カフェラテ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">カフェラテ</span>
+              <span class="name-en">Cafe Latte</span>
+            </div>
+            <p class="menu-text about-text">まろやかなエスプレッソとなめらかなミルクのバランスが絶妙な、人気のカフェラテです。軽い泡立ちのあるミルクは、飲みやすさも抜群です。</p>
+          </div>
+        </div>
+        <div class="menu-product coffee" data-category="coffee">
+          <div class="menu-image">
+            <img src="./image/menu/caramelmacchiato.png" alt="キャラメルマキアート">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">キャラメルマキアート</span>
+              <span class="name-en">Caramel Macchiato</span>
+            </div>
+            <p class="menu-text about-text">キャラメルシロップとバニラシロップが入った、香り高いマキアートです。エスプレッソの苦みと、甘くてコクのあるキャラメルのバランスが絶妙で、まるでデザートのような味わいが楽しめます。</p>
+          </div>
+        </div>
+
+        <div class="menu-product softdrink" data-category="softdrink">
+          <div class="menu-image">
+            <img src="./image/menu/hibiscustea.png" alt="ハイビスカスティー">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">ハイビスカスティー</span>
+              <span class="name-en"> Hibiscus Tea</span>
+            </div>
+            <p class="menu-text about-text"> トロピカルな香りと赤い色が美しいハイビスカスティー。フルーティで酸味があり、さわやかな飲み口です。</p>
+          </div>
+        </div>
+        <div class="menu-product softdrink" data-category="softdrink">
+          <div class="menu-image">
+            <img src="./image/menu/mintlemonade.png" alt="ミントレモネード">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">ミントレモネード</span>
+              <span class="name-en">Mint Lemonade</span>
+            </div>
+            <p class="menu-text about-text">爽やかなミントの香りが広がるレモネード。レモンの酸味とミントの清涼感がマッチし、暑い日にぴったりです。</p>
+          </div>
+        </div>
+        <div class="menu-product softdrink" data-category="softdrink">
+          <div class="menu-image">
+            <img src="./image/menu/gingerale.png" alt="ジンジャーエール">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">ジンジャーエール</span>
+              <span class="name-en">Ginger Ale</span>
+            </div>
+            <p class="menu-text about-text">生姜の風味が効いたスパイシーなジンジャーエール。さわやかな甘さと辛みが絶妙に調和した、シンプルで美味しい一杯です。</p>
+          </div>
+        </div>
+        <div class="menu-product softdrink" data-category="softdrink">
+          <div class="menu-image">
+            <img src="./image/menu/smoothie.png" alt="フルーツスムージー">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">フルーツスムージー</span>
+              <span class="name-en">Fruit Smoothie</span>
+            </div>
+            <p class="menu-text about-text">季節のフルーツをたっぷり使ったスムージー。自然な甘みと豊かな栄養が詰まった、ヘルシーで美味しいドリンクです。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo-wrapper">
+          <a href="#" class="logo"><span class="cafe-kitchen">Cafe&amp;Kitchen</span>Atlas</a>
+          <div class="sns-block">
+            <a class="mark" href="https://twitter.com/" target="_blank">
+              <img class="sns-mark" src="./image/twitter.png" alt="twitter">
+            </a>
+            <a class="mark" href="https://www.facebook.com/" target="_blank">
+              <img class="sns-mark" src="./image/facebook.png" alt="facebook">
+            </a>
+            <a class="mark" href="https://www.instagram.com/" target="_blank">
+              <img class="sns-mark" src="./image/instagram.png" alt="instagram">
+            </a>
+          </div>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li class="nav-item"><a href="index.html">TOP</a></li>
+            <li class="nav-item"><a href="#news">NEWS</a></li>
+            <li class="nav-item"><p class="">MENU</p>
+              <ul class="footer-menu-contents">
+                <li class=""><a href="menu-drinks.html">Drinks</a></li>
+                <li class=""><a href="menu-foods.html">Foods</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="index.html#store">STORE</a></li>
+            <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+          </ul>
+          </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">利用規約</a></li>
+            <li><a href="#">特定商取引法について</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+      </div>
+      <small>
+        Copyright © 2023 LULL inc. All Rights Reserved.
+      </small>
+    </div>
+    <p id="page-top"><a href="#">Page Top</a></p>
+  </footer>
+</body>
+</html>
