@@ -160,20 +160,24 @@ transition: 0.5s;
   right: 35px;
   width: 10px;
   height: 1px;
-  transform: rotate(180deg);/*線を縦にする*/
   background: #fff;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   transition: all .3s ease-in-out;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
 }
 .accordion-title::after {
   content: "";
   position: absolute;
   top: 50%;
   right: 35px;
-  opacity: 0;/*見えない状態の横線*/
+  opacity: 1;
   width: 10px;
   height: 1px;
   background: #fff;
@@ -193,15 +197,25 @@ transition: 0.5s;
 }
 .accordion-title.active::before {
   background: #fff;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transform: rotate(180deg);/*線を縦にする*/
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }
 .accordion-title.active::after {
   background: #fff;
-  opacity: 1;
+  opacity: 0;/*見えない状態の横線*/
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
 }
 ul.accordion-content {
   position: absolute;
@@ -491,9 +505,10 @@ footer small{
 
 
 /*************************
-以下、スマホ用CSS
-**************************/
 
+以下、スマホ用CSS
+
+**************************/
 @media screen and (max-width:768px){
 
   /* 共通パーツ */
@@ -505,7 +520,7 @@ footer small{
     letter-spacing: 3px;
     text-align: center;
   }
-  #concept, #news, #thought, #cakelife, #menu, #package, #store, #contact{
+  #concept, #news, #menu, #package, #store, #contact{
     padding:60px 0;
   }
   .g-navi {
@@ -537,7 +552,7 @@ footer small{
   }
   /* ロゴエリア */
   .sp-logo{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     color: #fff;
     letter-spacing: 3px;
     font-family: 'Prata', cursive;
@@ -580,7 +595,7 @@ footer small{
   #main-visual{
     background-image:url(../image/sp/mv.png);
     background-position: center;
-    height: 500px;
+    height: 85vh;
     max-height: inherit;
     padding-top: 60px;
   }
@@ -594,26 +609,35 @@ footer small{
     position: relative;
     top: 0;
     right: 0;
+    text-shadow: 1px 2px 10px #000;
   }
   .text{
     font-size: 1rem;
     margin-bottom: 30px;
     letter-spacing: 2px;
+    text-shadow: 1px 1px 10px #000;
   }
-  /* コンセプトエリア */
-  #concept{
-    background-size: 45%;
-  }
-  /* こだわりエリア */
+
+  /* NEWSエリア */
   .news-wrapper{
-    flex-wrap: wrap;
+    display: block;
   }
   .news-box{
+    width: 100%;
     margin-bottom: 20px;
     max-width: inherit;
   }
+  .news-box a{
+    display: flex;
+  }
   .news-image{
-    width: 100%;
+    width: 40%;
+  }
+  .news-title{
+    /* font-weight: bold; */
+  }
+  .news-text{
+    padding: 0 0 0 10px;
   }
   .staff-box{
     display: none;
@@ -627,6 +651,7 @@ footer small{
     width: 100%;
     margin-bottom: 15px;
   }
+
   .staff-text{
     width: 100%;
     background: #fff0af;
@@ -745,7 +770,17 @@ footer small{
     margin-bottom: 0;
   }
   .footer-menu ul li{
+    margin-bottom: 20px;
+  }
+  .footer-menu ul li p{
     margin-bottom: 10px;
+  }
+  .footer-menu-contents{
+    margin-bottom: 20px;
+  }
+  ul.footer-menu-contents li{
+    padding-left: 0;
+    margin-bottom:10px;
   }
 }
 /* ここまで768px以下の範囲 */
