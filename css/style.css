@@ -520,18 +520,36 @@ footer small{
     letter-spacing: 3px;
     text-align: center;
   }
-  #concept, #news, #menu, #package, #store, #contact{
+  #news, #menu, #store, #contact{
     padding:60px 0;
   }
   .g-navi {
     display: block;
     position: fixed;
     z-index: 2;
+    height: 100vh;
     padding-top: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
     transform: translateY(-100%);
     transition: .5s ease-in-out;
-    height: 100vh;
-  }
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.g-navi ul li a,
+.g-navi ul li p{
+  display: block;
+  color: #401801;
+  padding: 20px 0;
+  letter-spacing: .25rem;
+}
+.g-navi ul li a.scrolled,
+.g-navi ul li p.scrolled{
+  display: block;
+  color: #000;
+}
   .g-navi ul{
     display: block;
   }
@@ -554,7 +572,7 @@ footer small{
   .sp-logo{
     /* font-size: 1.5rem; */
     color: #fff;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     font-family: 'Prata', cursive;
   }
   /* ハンバーガーメニュー */
@@ -633,9 +651,6 @@ footer small{
   .news-image{
     width: 40%;
   }
-  .news-title{
-    /* font-weight: bold; */
-  }
   .news-text{
     padding: 0 0 0 10px;
   }
@@ -681,36 +696,6 @@ footer small{
   .life-type a{
     padding: 0;
   }
-  /* ラインナップエリア */
-  .menu-items{
-    margin-bottom: 0;
-  }
-  .menu-items ul{
-    flex-wrap: wrap;
-    border-bottom: none;
-  }
-  .menu-items ul li{
-    flex-basis: 50%;
-    border-bottom: 2px solid #401801;
-    margin-bottom: 20px;
-  }
-  .menu-items ul li a{
-    border-radius: 20px 20px 0 0;
-    padding: 6px 0;
-  }
-  .menu-wrapper{
-    flex-wrap: wrap;
-  }
-  .menu-product{
-    flex-basis: 100%;
-    margin-bottom: 40px;
-  }
-  .menu-image{
-    padding: 3rem 0;
-  }
-  .more-menu{
-    margin-top: 0;
-  }
 
   /* パッケージエリア */
   .package-wrapper{
@@ -723,6 +708,7 @@ footer small{
   .package-menu:last-child{
     margin-bottom: 0;
   }
+
   /* 店舗情報エリア */
   .store-wrapper{
     flex-wrap: wrap;
@@ -743,7 +729,6 @@ footer small{
   address{
     line-height: 2.4;
   }
-
 
   /* フッターエリア */
   .footer-content{

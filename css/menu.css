@@ -3,6 +3,13 @@
 /*************************
 メニューエリア
 **************************/
+
+/* ラインナップエリア */
+
+
+.menu-image{
+    padding: 3rem 0;
+}
 #menu{
     background-color: #697366;
 }
@@ -79,3 +86,36 @@
     margin-top: 60px;
 }
 
+/*************************
+
+以下、スマホ用CSS
+
+**************************/
+@media screen and (max-width:768px){
+    .menu-items{
+        margin-bottom: 0;
+    }
+    .menu-items ul{
+        flex-wrap: wrap;
+        border-bottom: none;
+    }
+    .menu-items ul li{
+        flex-basis: 50%;
+        border-bottom: 2px solid #401801;
+        margin-bottom: 20px;
+    }
+    .menu-items ul li a{
+        border-radius: 20px 20px 0 0;
+        padding: 6px 0;
+    }
+    .menu-wrapper{
+        flex-wrap: wrap;
+    }
+    .menu-product{
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
+    .menu-image{
+        padding: 0;
+    }
+}

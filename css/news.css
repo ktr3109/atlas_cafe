@@ -43,3 +43,20 @@
     /* display: inline-block; */
     margin-top: 10px;
 }
+
+/*************************
+
+以下、スマホ用CSS
+
+**************************/
+@media screen and (max-width:768px){
+    .news-main-image{
+        height:auto;
+    }
+    .news-details-text .news-title{
+        font-size: 1.25rem;
+    }
+    .news-details-main{
+        margin: 20px 0 0;
+    }
+}
