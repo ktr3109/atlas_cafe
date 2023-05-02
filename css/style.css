@@ -1,7 +1,11 @@
 @charset "UTF-8";
-/*
-カラーコード : #697366 #BFAF9B #BFAF9B #401801 #8C5B3F
-*/
+/*************************
+カラーコード  
+#d4dee0
+#f5f1e8
+#d7c9bc
+#705c53
+**************************/
 
 /*************************
 共通パーツ
@@ -10,7 +14,7 @@ html{
   font-size: 16px;
 }
 body{
-  color: #624649;
+  color: #705c53;
   font-size: 1rem;
   font-family: "YuGothic",  Yu Gothic,  sans-serif;
 }
@@ -58,11 +62,11 @@ h2{
   font-family: 'Prata', cursive;
   font-weight: normal;
   letter-spacing: 4px;
-  color:#401801;
+  color:#705c53;
 }
 .ja-title{
   font-size: 1rem;
-  color:#401801;
+  color:#705c53;
 }
 .title{
   text-align: center;
@@ -83,6 +87,7 @@ header {
   width: 100%;
   z-index: 999; /* ヘッダーを最前面に表示するための設定 */
 }
+
 .g-navi-sp{
   display: none;
 }
@@ -100,7 +105,7 @@ header {
   -o-transition: background-color 0.5s ease-in-out;
 }
 nav.scrolled {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
 }
 .g-navi ul{
   display: flex;
@@ -121,14 +126,14 @@ nav.scrolled {
 .g-navi ul li a.scrolled,
 .g-navi ul li p.scrolled{
   display: block;
-  color: #000;
+  color: #705c53;
 }
 
 /* 「メニューテキスト」にマウスオンした際のデザイン */
 .g-navi ul li a:hover,
 .g-navi ul li p:hover,
 .g-navi ul li a.scrolled:hover{
-  color: #401801;
+  color: #705c53;
   background: rgba(255, 255, 255, 0.5);
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -193,16 +198,10 @@ transition: 0.5s;
 .accordion-title.scrolled::after,
 .accordion-title.active:hover::before,
 .accordion-title.active:hover::after {
-  background: #401801;
+  background: #705c53;
 }
 .accordion-title.active::before {
-  background: #fff;
-  transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transform: rotate(180deg);/*線を縦にする*/
+  transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -210,18 +209,14 @@ transition: 0.5s;
 }
 .accordion-title.active::after {
   background: #fff;
-  opacity: 0;/*見えない状態の横線*/
-  transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
+  opacity: 0;
+
 }
 ul.accordion-content {
   position: absolute;
   z-index: 10;
   display: none;
-  color: #401801;
+  color: #705c53;
   width: 100%;
   transition: background-color 0.5s ease-in-out;
   -webkit-transition: background-color 0.5s ease-in-out;
@@ -231,11 +226,7 @@ ul.accordion-content {
 }
 ul.accordion-content.scrolled {
   background: rgba(255, 255, 255, 0.6);
-  transition: background-color 0.5s ease-in-out;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -ms-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
+
 }
 .accordion-content .accordion-lists{
   text-align: left;
@@ -250,6 +241,24 @@ ul.accordion-content.scrolled {
   content: "●";
   position: absolute;
   left: 20px;
+}
+
+/*************************
+　各子ページの背景色つきヘッダー
+**************************/
+.header-painted .accordion-content{
+  background-color: rgba(255, 255, 255, .9);
+}
+.header-painted .g-navi ul.accordion-content li a:hover{
+  background: #d7c9bc;
+}
+.header-painted .g-navi ul li a,
+.header-painted .g-navi ul li p{
+  color: #705c53;
+}
+.header-painted .accordion-title::after,
+.header-painted .accordion-title::before{
+  background-color: #705c53;
 }
 
 /*************************
@@ -286,8 +295,8 @@ ul.accordion-content.scrolled {
 /*************************
 お知らせエリア
 **************************/
-#news{
-  background-color: #697366;
+.news_bk{
+  background-color: #d4dee0;
 }
 .news-box{
   width: 230px;
@@ -399,7 +408,7 @@ ul.accordion-content.scrolled {
 店舗(ストア)情報エリア
 **************************/
 #store{
-  background: #eee;
+  background: #f5f1e8;
 }
 .map-image, .cafe-text{
   flex-basis: 48%;
@@ -430,7 +439,7 @@ footer{
 }
 footer::after {
   content: '';
-  background-color: rgba(0,0,0,.75);
+  background-color: rgba(112, 92, 83, .8);
   position: absolute;
   left: 0;
   right: 0;
@@ -498,8 +507,11 @@ footer::after {
   left: -10px;
 }
 footer small{
+  position: relative;
+  z-index: 1;
   padding-bottom: 20px;
   display: block;
+  color: #fff;
   text-align: center;
 }
 
@@ -536,20 +548,18 @@ footer small{
     -moz-transition: .5s ease-in-out;
     -ms-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
-}
-
-.g-navi ul li a,
-.g-navi ul li p{
-  display: block;
-  color: #401801;
-  padding: 20px 0;
-  letter-spacing: .25rem;
-}
-.g-navi ul li a.scrolled,
-.g-navi ul li p.scrolled{
-  display: block;
-  color: #000;
-}
+  }
+  .g-navi ul li a{
+    display: block;
+    color: #705c53;
+    padding: 20px 0;
+    letter-spacing: .25rem;
+  }
+  .g-navi ul li a.scrolled,
+  .g-navi ul li p.scrolled{
+    display: block;
+    color: #000;
+  }
   .g-navi ul{
     display: block;
   }
@@ -562,12 +572,39 @@ footer small{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #401801;
+    background-color: #705c53;
     width: 100%;
     height: 60px;
     padding: 4%;
     z-index: 3;
   }
+
+  /*アコーディオンメニュー*/
+  .accordion-title {
+    position: relative;
+    margin: 0;
+    font-weight: normal;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px 0 10px;
+  }
+  .accordion-title::before,
+  .accordion-title::after{
+    display: none;
+  }
+  ul.accordion-content{
+    position: relative;
+    z-index: 10;
+    display: block;
+    color: #705c53;
+    width: 100%;
+  }
+  .accordion-content .accordion-lists a{
+    padding: 20px 0 20px 40px;
+    color: #705c53;
+
+  }
+
   /* ロゴエリア */
   .sp-logo{
     /* font-size: 1.5rem; */

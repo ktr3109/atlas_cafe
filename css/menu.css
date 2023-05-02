@@ -3,15 +3,8 @@
 /*************************
 メニューエリア
 **************************/
-
-/* ラインナップエリア */
-
-
-.menu-image{
-    padding: 3rem 0;
-}
 #menu{
-    background-color: #697366;
+    background-color: #f5f1e8;
 }
 .menu-items{
     margin-bottom: 3rem;
@@ -20,7 +13,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    border-bottom: 2px solid #401801;
+    border-bottom: 2px solid #705c53;
 }
 .menu-items ul li{
     width: 100%;
@@ -29,7 +22,7 @@
 .menu-items ul li a{
     display: block;
     color: #333;
-    background-color: #d1d1d1;
+    background-color: #d7c9bc;
     border-radius: 30px 30px 0 0;
     padding: 0.5rem 0;
     -webkit-border-radius: 30px 30px 0 0;
@@ -39,11 +32,11 @@
 }
 .menu-items ul li a:hover{
     color: #fff;
-    background-color: #401801;
+    background-color: #705c53;
 }
 .menu-items ul li.active a{
     color: #fff;
-    background-color: #401801;
+    background-color: #705c53;
 }
 .menu-wrapper{
     display: -webkit-flex;
@@ -57,7 +50,7 @@
     /* flex-basis: 31%; */
     width: calc(25% - 22px);
     margin-bottom: 40px;
-    color: #401801;
+    color: #705c53;
 }
 .menu-image{
     display: block;
