@@ -33,58 +33,35 @@ $(document).ready(function() {
 // ハンバーガーメニュー
 $(function () {
   $('.menu-trigger').click(function () {
-    //ハンバーガーボタン（.menu-trigger）をタップすると、
     $(this).toggleClass('active');
-    //タップしたハンバーガーボタン（.menu-trigger）に（.active）を追加・削除する。
     if ($(this).hasClass('active')) {
-      //もし、ハンバーガーボタン（.menu-trigger）に（.active）があれば、
       $('.g-navi').addClass('active');
-      //(.g-navi)にも（.active）を追加する。
     } else {
-      //それ以外の場合は、
       $('.g-navi').removeClass('active');
-      //(.g-navi)にある（.active）を削除する。
     }
   });
   $('.nav-wrapper ul li a').click(function () {
-    //各メニューリンク（.nav-wrapper ul li a）をタップすると、
     $('.menu-trigger').removeClass('active');
-    //ハンバーガーボタン（.menu-trigger）にある（.active）を削除する。
     $('.g-navi').removeClass('active');
-    //(.g-navi)にある（.active）も削除する。
   });
 });
 
-//スクロールした際の動きを関数でまとめる
+//ページトップボタン
 function PageTopAnime() {
   var scroll = $(window).scrollTop();
-  if (scroll >= 200){//上から200pxスクロールしたら
-    $('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-    $('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
+  if (scroll >= 200){//200px動いた場合
+    $('#page-top').removeClass('moving-down');
+    $('#page-top').addClass('moving-up');
   }else{
-    if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
-      $('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-      $('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
+    if($('#page-top').hasClass('moving-up')){
+      $('#page-top').removeClass('moving-up');
+      $('#page-top').addClass('moving-down');
     }
   }
 }
-
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
-
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-  PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
-
-// #page-topをクリックした際の設定
-$('#page-top a').click(function () {
-    $('body,html').animate({
-        scrollTop: 0//ページトップまでスクロール
-    }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
-    return false;//リンク自体の無効化
+// 画面をスクロールをしたら動く
+$(window).scroll(function(){
+  PageTopAnime();
 });
 
 // タブ切り替え
