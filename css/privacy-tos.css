@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*************************
+共通
+**************************/
+.preamble{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.epilogue{
+    margin-top: 40px;
+}
+
+/*************************
+プライバシーポリシー
+**************************/
+#privacy{
+    background:#d4dee0;
+}
+#privacy h2,
+#privacy .ja-title {
+    color: #705c53;
+}
+.privacy-content{
+    background-color: #fff;
+    padding: 40px;
+}
+.privacy-content h3{
+    margin: 40px 0 0;
+    border-bottom: 1px #d4dee0 solid;
+}
+.privacy-content ul li{
+    margin: 0 0 0 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+
+
+
+/*************************
+利用規約
+**************************/
+#tos{
+    background:#d4dee0;
+}
+#tos h2,
+#tos .ja-title {
+    color: #705c53;
+}
+.tos-content{
+    background-color: #fff;
+    padding: 40px;
+}
+.tos-content h3{
+    margin: 40px 0 0;
+    border-bottom: 1px #d4dee0 solid;
+}
+.tos-content li:first-child h3 {
+    margin: 0;
+}
+.tos-content ul li{
+    margin: 0 0 0 20px;
+    padding-left: 0;
+    list-style-type: disc;
+}
+
+
+
+/*************************
+
+以下、スマホ用CSS
+
+**************************/
+@media screen and (max-width:768px){
+}

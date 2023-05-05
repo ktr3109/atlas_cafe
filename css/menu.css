@@ -71,8 +71,13 @@
 .menu-text{
     padding-top: 10px;
     margin-top: 10px;
-    border-top: 1px #ccc dashed;
     line-height: 1.8;
+}
+.menu-product:nth-child(2n+1) .menu-text {
+    border-top: 4px #d4dee0 dashed;
+}
+.menu-product:nth-child(2n+2) .menu-text {
+    border-top: 4px #d7c9bc dashed;
 }
 .more-menu{
     text-align: center;
