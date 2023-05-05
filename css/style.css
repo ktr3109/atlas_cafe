@@ -549,7 +549,7 @@ footer small{
     -ms-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
   }
-  .g-navi ul li a{
+  .g-navi ul li a {
     display: block;
     color: #705c53;
     padding: 20px 0;
