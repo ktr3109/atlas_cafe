@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*************************
-カラーコード  
+カラーコード
 #d4dee0
 #f5f1e8
 #d7c9bc
@@ -522,7 +522,6 @@ footer small{
 
 **************************/
 @media screen and (max-width:768px){
-
   /* 共通パーツ */
   section{
     overflow-x: hidden;
