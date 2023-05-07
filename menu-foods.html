@@ -1,205 +1,210 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe&amp;Kitchen Atlas | MENU-Foods</title>
-    <meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe&amp;Kitchen Atlas | MENU-Foods</title>
+  <meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="./js/script.js"></script>
 </head>
+
 <body>
-<header class="header-painted">
+  <header class="header-painted">
     <nav class="g-navi">
-    <div class="container nav-wrapper">
+      <div class="container nav-wrapper">
         <ul>
-        <li class="nav-item"><a href="index.html">TOP</a></li>
-        <li class="nav-item"><a href="index.html#news">NEWS</a></li>
-        <li class="nav-item"><p class="accordion-title">MENU</p>
+          <li class="nav-item"><a href="index.html">TOP</a></li>
+          <li class="nav-item"><a href="index.html#news">NEWS</a></li>
+          <li class="nav-item">
+            <p class="accordion-title">MENU</p>
             <ul class="accordion-content">
-                <li class="accordion-lists"><a href="menu-drinks.html">Drinks</a></li>
-                <li class="accordion-lists"><a href="menu-foods.html">Foods</a></li>
+              <li class="accordion-lists"><a href="menu-drinks.html">Drinks</a></li>
+              <li class="accordion-lists"><a href="menu-foods.html">Foods</a></li>
             </ul>
-        </li>
-        <li class="nav-item"><a href="index.html#store">STORE</a></li>
-        <li class="nav-item"><a href="contact.html">CONTACT</a></li>
+          </li>
+          <li class="nav-item"><a href="index.html#store">STORE</a></li>
+          <li class="nav-item"><a href="contact.html">CONTACT</a></li>
         </ul>
-    </div>
+      </div>
     </nav>
     <nav class="g-navi-sp">
-    <div class="sp-logo">
+      <div class="sp-logo">
         <p class="logo-title">Cafe Atlas</p>
-    </div>
-    <div class="menu-trigger">
+      </div>
+      <div class="menu-trigger">
         <span></span>
         <span></span>
         <span></span>
-    </div>
+      </div>
     </nav>
-</header>
-<section id="menu">
+  </header>
+  <section id="menu">
     <div class="container">
-        <div class="title">
-            <h2>Foods</h2>
-            <p class="ja-title">お食事</p>
+      <div class="title">
+        <h2>Foods</h2>
+        <p class="ja-title">お食事</p>
+      </div>
+      <div class="menu-items">
+        <ul class="filter">
+          <li class="menu-tab active" data-filter="all"><a class="all" href="#">All</a></li>
+          <li class="menu-tab" data-filter="foods"><a class="foods" href="#">Foods</a></li>
+          <li class="menu-tab" data-filter="dessert"><a class="dessert" href="#">Dessert</a></li>
+        </ul>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-product foods" data-category="foods">
+          <div class="menu-image">
+            <img src="./image/menu/AvocadoBacon_new.png" alt="アボカドベーコンサンド">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">アボカドベーコンサンド</span>
+              <span class="name-en">Avocado Bacon Sandwich</span>
+            </div>
+            <p class="menu-text about-text">ほくほくアボカドとカリッとベーコンの相性抜群のサンドイッチです。</p>
+          </div>
         </div>
-        <div class="menu-items">
-            <ul class="filter">
-            <li class="menu-tab active" data-filter="all"><a class="all" href="#">All</a></li>
-            <li class="menu-tab" data-filter="foods"><a class="foods" href="#">Foods</a></li>
-            <li class="menu-tab" data-filter="dessert"><a class="dessert" href="#">Dessert</a></li>
-            </ul>
+        <div class="menu-product foods" data-category="foods">
+          <div class="menu-image">
+            <img src="./image/menu/Egg.png" alt="エッグサンドイッチ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">エッグサンドイッチ</span>
+              <span class="name-en">Egg Sandwich</span>
+            </div>
+            <p class="menu-text about-text">ふわふわの卵とベーコン、レタスが挟まった絶品サンドイッチ！朝食にもピッタリ！</p>
+          </div>
         </div>
-        <div class="menu-wrapper">
-            <div class="menu-product foods" data-category="foods">
-            <div class="menu-image">
-                <img src="./image/menu/AvocadoBacon_new.png" alt="アボカドベーコンサンド">
+        <div class="menu-product foods" data-category="foods">
+          <div class="menu-image">
+            <img src="./image/menu/Turkish-style.png" alt="トルコ風チキンサンド">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">トルコ風チキンサンド</span>
+              <span class="name-en">Turkish-style chicken sandwich</span>
             </div>
-            <div class="menu-about">
-                <div class="menu-name">
-                <span class="name-ja">アボカドベーコンサンド</span>
-                <span class="name-en">Avocado Bacon Sandwich</span>
-                </div>
-                <p class="menu-text about-text">ほくほくアボカドとカリッとベーコンの相性抜群のサンドイッチです。</p>
-            </div>
-            </div>
-            <div class="menu-product foods" data-category="foods">
-            <div class="menu-image">
-                <img src="./image/menu/Egg.png" alt="エッグサンドイッチ">
-            </div>
-            <div class="menu-about">
-                <div class="menu-name">
-                <span class="name-ja">エッグサンドイッチ</span>
-                <span class="name-en">Egg Sandwich</span>
-                </div>
-                <p class="menu-text about-text">ふわふわの卵とベーコン、レタスが挟まった絶品サンドイッチ！朝食にもピッタリ！</p>
-            </div>
-            </div>
-            <div class="menu-product foods" data-category="foods">
-            <div class="menu-image">
-                <img src="./image/menu/Turkish-style.png" alt="トルコ風チキンサンド">
-            </div>
-            <div class="menu-about">
-                <div class="menu-name">
-                <span class="name-ja">トルコ風チキンサンド</span>
-                <span class="name-en">Turkish-style chicken sandwich</span>
-                </div>
-                <p class="menu-text about-text">新鮮な野菜と旨味たっぷりのトルコ風チキンが特製パンでボリュームたっぷりのサンドイッチに！</p>
-            </div>
-            </div>
-            <div class="menu-product foods" data-category="foods">
-                <div class="menu-image">
-                    <img src="./image/menu/Carbonara.png" alt="カルボナーラパスタ">
-                </div>
-                <div class="menu-about">
-                    <div class="menu-name">
-                        <span class="name-ja">カルボナーラパスタ</span>
-                        <span class="name-en">Carbonara pasta</span>
-                    </div>
-                    <p class="menu-text about-text">クリーミーな卵とベーコンのソースがかかったスパゲッティ。古典的なイタリア料理です。</p>
-                </div>
-                </div>            <div class="menu-product party" data-category="dessert">
-            <div class="menu-image">
-                <img src="./image/menu/Chiffon.png" alt="シフォンケーキ">
-            </div>
-            <div class="menu-about">
-                <div class="menu-name">
-                    <span class="name-ja">シフォンケーキ</span>
-                    <span class="name-en">Chiffon cake</span>
-                </div>
-                <p class="menu-text about-text">ふわふわの生地と、しっとりした口当たりが魅力のシフォンケーキ。何度食べても飽きない味わいです。</p>
-            </div>
-            </div>
-            <div class="menu-product gifts" data-category="dessert">
-                <div class="menu-image">
-                    <img src="./image/menu/Chocolatecake.png" alt="チョコレートケーキ">
-                </div>
-                <div class="menu-about">
-                    <div class="menu-name">
-                        <span class="name-ja">チョコレートケーキ</span>
-                        <span class="name-en">Chocolate cake</span>
-                    </div>
-                    <p class="menu-text about-text">しっとり濃厚なチョコレートケーキ。コーヒーとの相性も抜群です。</p>
-                </div>
-            </div>
-            <div class="menu-product gifts" data-category="dessert">
-                <div class="menu-image">
-                    <img src="./image/menu/Applepie.png" alt="アップルパイ">
-                </div>
-                <div class="menu-about">
-                    <div class="menu-name">
-                        <span class="name-ja">アップルパイ</span>
-                        <span class="name-en">Apple pie</span>
-                    </div>
-                    <p class="menu-text about-text">シナモンが香る、ほくほくのりんごとサクサクのパイ生地が絶妙な組み合わせ。甘さ控えめなので、どんなシーンでも食べられます。</p>
-                </div>
-            </div>
-            <div class="menu-product gifts" data-category="dessert">
-                <div class="menu-image">
-                    <img src="./image/menu/ChocolateBananaIce.png" alt="チョコレートバナナアイス">
-                </div>
-                <div class="menu-about">
-                    <div class="menu-name">
-                        <span class="name-ja">チョコレートバナナアイス</span>
-                        <span class="name-en">Chocolate Banana Ice Cream</span>
-                    </div>
-                    <p class="menu-text about-text">しっとりとしたチョコレートアイスに、ほんのりバナナの風味が加わった大人の味わい。</p>
-                </div>
-            </div>
+            <p class="menu-text about-text">新鮮な野菜と旨味たっぷりのトルコ風チキンが特製パンでボリュームたっぷりのサンドイッチに！</p>
+          </div>
         </div>
+        <div class="menu-product foods" data-category="foods">
+          <div class="menu-image">
+            <img src="./image/menu/Carbonara.png" alt="カルボナーラパスタ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">カルボナーラパスタ</span>
+              <span class="name-en">Carbonara pasta</span>
+            </div>
+            <p class="menu-text about-text">クリーミーな卵とベーコンのソースがかかったスパゲッティ。古典的なイタリア料理です。</p>
+          </div>
+        </div>
+        <div class="menu-product party" data-category="dessert">
+          <div class="menu-image">
+            <img src="./image/menu/Chiffon.png" alt="シフォンケーキ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">シフォンケーキ</span>
+              <span class="name-en">Chiffon cake</span>
+            </div>
+            <p class="menu-text about-text">ふわふわの生地と、しっとりした口当たりが魅力のシフォンケーキ。何度食べても飽きない味わいです。</p>
+          </div>
+        </div>
+        <div class="menu-product gifts" data-category="dessert">
+          <div class="menu-image">
+            <img src="./image/menu/Chocolatecake.png" alt="チョコレートケーキ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">チョコレートケーキ</span>
+              <span class="name-en">Chocolate cake</span>
+            </div>
+            <p class="menu-text about-text">しっとり濃厚なチョコレートケーキ。コーヒーとの相性も抜群です。</p>
+          </div>
+        </div>
+        <div class="menu-product gifts" data-category="dessert">
+          <div class="menu-image">
+            <img src="./image/menu/Applepie.png" alt="アップルパイ">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">アップルパイ</span>
+              <span class="name-en">Apple pie</span>
+            </div>
+            <p class="menu-text about-text">シナモンが香る、ほくほくのりんごとサクサクのパイ生地が絶妙な組み合わせ。甘さ控えめなので、どんなシーンでも食べられます。</p>
+          </div>
+        </div>
+        <div class="menu-product gifts" data-category="dessert">
+          <div class="menu-image">
+            <img src="./image/menu/ChocolateBananaIce.png" alt="チョコレートバナナアイス">
+          </div>
+          <div class="menu-about">
+            <div class="menu-name">
+              <span class="name-ja">チョコレートバナナアイス</span>
+              <span class="name-en">Chocolate Banana Ice Cream</span>
+            </div>
+            <p class="menu-text about-text">しっとりとしたチョコレートアイスに、ほんのりバナナの風味が加わった大人の味わい。</p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-
-<footer>
+  </section>
+  <footer>
     <div class="container">
-    <div class="footer-content">
+      <div class="footer-content">
         <div class="logo-wrapper">
-            <a href="./index.html" class="logo"><span class="cafe-kitchen">Cafe&amp;Kitchen</span>Atlas</a>
-            <div class="sns-block">
-                <a class="mark" href="https://twitter.com/" target="_blank">
-                <img class="sns-mark" src="./image/twitter.png" alt="twitter">
-                </a>
-                <a class="mark" href="https://www.facebook.com/" target="_blank">
-                <img class="sns-mark" src="./image/facebook.png" alt="facebook">
-                </a>
-                <a class="mark" href="https://www.instagram.com/" target="_blank">
-                <img class="sns-mark" src="./image/instagram.png" alt="instagram">
-                </a>
-            </div>
+          <a href="./index.html" class="logo"><span class="cafe-kitchen">Cafe&amp;Kitchen</span>Atlas</a>
+          <div class="sns-block">
+            <a class="mark" href="https://twitter.com/" target="_blank">
+              <img class="sns-mark" src="./image/twitter.png" alt="twitter">
+            </a>
+            <a class="mark" href="https://www.facebook.com/" target="_blank">
+              <img class="sns-mark" src="./image/facebook.png" alt="facebook">
+            </a>
+            <a class="mark" href="https://www.instagram.com/" target="_blank">
+              <img class="sns-mark" src="./image/instagram.png" alt="instagram">
+            </a>
+          </div>
         </div>
         <div class="footer-menu">
-            <ul>
+          <ul>
             <li class="nav-item"><a href="index.html">TOP</a></li>
             <li class="nav-item"><a href="index.html#news">NEWS</a></li>
-            <li class="nav-item"><p class="">MENU</p>
-                <ul class="footer-menu-contents">
+            <li class="nav-item">
+              <p class="">MENU</p>
+              <ul class="footer-menu-contents">
                 <li class=""><a href="menu-drinks.html">Drinks</a></li>
                 <li class=""><a href="menu-foods.html">Foods</a></li>
-                </ul>
+              </ul>
             </li>
             <li class="nav-item"><a href="index.html#store">STORE</a></li>
             <li class="nav-item"><a href="contact.html">CONTACT</a></li>
-            </ul>
+          </ul>
         </div>
         <div class="footer-menu">
-            <ul>
+          <ul>
             <li><a href="./legal/tos.html">利用規約</a></li>
             <li><a href="./legal/privacy.html">プライバシーポリシー</a></li>
-            </ul>
+          </ul>
         </div>
-    </div>
-    <small>
+      </div>
+      <small>
         Copyright © 2021 LULL inc. All Rights Reserved.
-    </small>
+      </small>
     </div>
-</footer>
+  </footer>
 </body>
+
 </html>

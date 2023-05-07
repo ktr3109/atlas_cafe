@@ -1,19 +1,25 @@
 @charset "UTF-8";
+
 /*************************
 共通パーツ
 **************************/
-html{
+html {
   font-size: 16px;
 }
-body{
+
+body {
   color: #705c53;
   font-size: 1rem;
-  font-family: "YuGothic",  Yu Gothic,  sans-serif;
+  font-family: "YuGothic", Yu Gothic, sans-serif;
 }
-ul,li,ol{
+
+ul,
+li,
+ol {
   list-style-type: none;
 }
-a{
+
+a {
   text-decoration: none;
   transition: 0.5s;
   -webkit-transition: 0.5s;
@@ -21,50 +27,68 @@ a{
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-a:hover{
+
+a:hover {
   transition: 0.3s;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.container{
+
+.container {
   max-width: 1024px;
   width: 90%;
   margin: 0 auto;
 }
-h1{
+
+h1 {
   font-family: 'Prata', cursive;
   font-size: 4rem;
   letter-spacing: 10px;
   color: #fff;
   font-weight: normal;
 }
-h1 span{
+
+h1 span {
   display: block;
   letter-spacing: 5px;
   font-size: 1.2rem;
 }
-#concept, #news, #menu, #package, #store, #contact,#privacy,#tos{
-  padding:80px 0;
+
+#concept,
+#news,
+#menu,
+#package,
+#store,
+#contact,
+#privacy,
+#tos {
+  padding: 80px 0;
 }
-h2{
+
+h2 {
   font-size: 3rem;
   margin-bottom: -5px;
   font-family: 'Prata', cursive;
   font-weight: normal;
   letter-spacing: 4px;
-  color:#705c53;
+  color: #705c53;
 }
-.ja-title{
+
+.ja-title {
   font-size: 1rem;
-  color:#705c53;
+  color: #705c53;
 }
-.title{
+
+.title {
   text-align: center;
   margin-bottom: 40px;
 }
-.news-wrapper, .package-wrapper, .store-wrapper{
+
+.news-wrapper,
+.package-wrapper,
+.store-wrapper {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -77,12 +101,15 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 999; /* ヘッダーを最前面に表示するための設定 */
+  z-index: 999;
+  /* ヘッダーを最前面に表示するための設定 */
 }
-.g-navi-sp{
+
+.g-navi-sp {
   display: none;
 }
-.g-navi{
+
+.g-navi {
   position: absolute;
   width: 100%;
   display: flex;
@@ -95,34 +122,40 @@ header {
   -ms-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
 }
+
 nav.scrolled {
   background: rgba(255, 255, 255, 0.8);
 }
-.g-navi ul{
+
+.g-navi ul {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
 }
-.g-navi ul li{
+
+.g-navi ul li {
   flex-basis: 16.6%;
   text-align: center;
 }
+
 .g-navi ul li a,
-.g-navi ul li p{
+.g-navi ul li p {
   display: block;
   color: #fff;
   padding: 20px 0;
 }
+
 .g-navi ul li a.scrolled,
-.g-navi ul li p.scrolled{
+.g-navi ul li p.scrolled {
   display: block;
   color: #705c53;
 }
+
 /* 「メニューテキスト」にマウスオンした際のデザイン */
 .g-navi ul li a:hover,
 .g-navi ul li p:hover,
-.g-navi ul li a.scrolled:hover{
+.g-navi ul li a.scrolled:hover {
   color: #705c53;
   background: rgba(255, 255, 255, 0.5);
   transition: 0.3s;
@@ -131,13 +164,15 @@ nav.scrolled {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
-.g-navi ul li p{
-transition: 0.5s;
--webkit-transition: 0.5s;
--moz-transition: 0.5s;
--ms-transition: 0.5s;
--o-transition: 0.5s;
+
+.g-navi ul li p {
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
+
 /*アコーディオンメニュー*/
 .accordion-title {
   position: relative;
@@ -147,6 +182,7 @@ transition: 0.5s;
   cursor: pointer;
   padding: 20px 0;
 }
+
 .accordion-title::before {
   content: "";
   position: absolute;
@@ -166,6 +202,7 @@ transition: 0.5s;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
 }
+
 .accordion-title::after {
   content: "";
   position: absolute;
@@ -181,6 +218,7 @@ transition: 0.5s;
   -ms-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
 }
+
 .accordion-title:hover::before,
 .accordion-title:hover::after,
 .accordion-title.scrolled::before,
@@ -189,6 +227,7 @@ transition: 0.5s;
 .accordion-title.active:hover::after {
   background: #705c53;
 }
+
 .accordion-title.active::before {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
@@ -196,10 +235,12 @@ transition: 0.5s;
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
 }
+
 .accordion-title.active::after {
   background: #fff;
   opacity: 0;
 }
+
 ul.accordion-content {
   position: absolute;
   z-index: 10;
@@ -212,18 +253,22 @@ ul.accordion-content {
   -ms-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
 }
+
 ul.accordion-content.scrolled {
   background: rgba(255, 255, 255, 0.6);
 }
-.accordion-content .accordion-lists{
+
+.accordion-content .accordion-lists {
   text-align: left;
 }
-.accordion-content .accordion-lists a{
+
+.accordion-content .accordion-lists a {
   padding: 20px 0 20px 40px;
   width: 100%;
   display: block;
   color: #fff;
 }
+
 .accordion-content .accordion-lists a::before {
   content: "●";
   position: absolute;
@@ -233,42 +278,48 @@ ul.accordion-content.scrolled {
 /*************************
 　各子ページの背景色つきヘッダー
 **************************/
-.header-painted .accordion-content{
+.header-painted .accordion-content {
   background-color: rgba(255, 255, 255, .9);
 }
-.header-painted .g-navi ul.accordion-content li a:hover{
+
+.header-painted .g-navi ul.accordion-content li a:hover {
   background: #d7c9bc;
 }
+
 .header-painted .g-navi ul li a,
-.header-painted .g-navi ul li p{
+.header-painted .g-navi ul li p {
   color: #705c53;
 }
+
 .header-painted .accordion-title::after,
-.header-painted .accordion-title::before{
+.header-painted .accordion-title::before {
   background-color: #705c53;
 }
 
 /*************************
 メインビジュアル
 **************************/
-#main-visual{
-  background-image:url(../image/mv.png);
-  background-repeat:no-repeat;
+#main-visual {
+  background-image: url(../image/mv.png);
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   height: 95vh;
 }
-.mv-wrapper{
+
+.mv-wrapper {
   position: relative;
 }
-.mv-right{
+
+.mv-right {
   position: absolute;
   top: 45vh;
   right: 0;
   max-width: 100%;
   text-align: center;
 }
-.text{
+
+.text {
   font-size: 1rem;
   padding: 10px 0;
   letter-spacing: 4px;
@@ -282,52 +333,63 @@ ul.accordion-content.scrolled {
 /*************************
 NEWSエリア
 **************************/
-.news_bk{
+.news_bk {
   background-color: #d4dee0;
 }
-.news-box{
+
+.news-box {
   width: 230px;
   max-width: 250px;
 }
-.news-box a{
+
+.news-box a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-.news-number{
+
+.news-number {
   font-size: .75rem;
   letter-spacing: 2px;
   font-family: 'Prata', cursive;
 }
-.news-title{
+
+.news-title {
   font-size: 1rem;
   font-weight: normal;
   margin-top: 5px;
 }
-.news-box a img{
+
+.news-box a img {
   transition: .4s;
   transform: scale(1);
 }
-.news-box a:hover img{
+
+.news-box a:hover img {
   transition: .1s cubic-bezier(0.45, 0, 0.55, 1);
   box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.3);
   transform: scale(0.95);
 }
-.news-box a .news-text{
+
+.news-box a .news-text {
   transition: .4s;
 }
-.news-box a:hover .news-text{
+
+.news-box a:hover .news-text {
   transition: .1s cubic-bezier(0.45, 0, 0.55, 1);
   color: #000;
 }
-.news-text{
+
+.news-text {
   padding: 0 10px;
-  color:#401801;
+  color: #401801;
 }
-.news-about{
+
+.news-about {
   font-size: 1rem;
 }
-.news-image{
+
+.news-image {
   max-width: 100%;
   border-radius: 5px;
 }
@@ -335,35 +397,41 @@ NEWSエリア
 /*************************
 店舗(ストア)情報エリア
 **************************/
-#store{
+#store {
   background: #f5f1e8;
 }
-.map-image, .cafe-text{
+
+.map-image,
+.cafe-text {
   flex-basis: 48%;
 }
-.store-name{
+
+.store-name {
   font-size: 1.25rem;
   letter-spacing: 2px;
   font-weight: bold;
   margin-bottom: 30px;
 }
-address{
+
+address {
   font-style: normal;
   letter-spacing: 1px;
   line-height: 1.8;
 }
-.store-address{
+
+.store-address {
   color: #624649;
 }
 
 /*************************
 フッターエリア
 **************************/
-footer{
+footer {
   position: relative;
   background: bottom / cover no-repeat url("../image/footer.png") fixed;
-  color:#fff;
+  color: #fff;
 }
+
 footer::after {
   content: '';
   background-color: rgba(112, 92, 83, .8);
@@ -373,7 +441,8 @@ footer::after {
   top: 0;
   bottom: 0;
 }
-.footer-content{
+
+.footer-content {
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -382,58 +451,72 @@ footer::after {
   padding: 40px 0;
   z-index: 1;
 }
-.footer-content a{
-  color:#fff;
+
+.footer-content a {
+  color: #fff;
 }
-.footer-content a:hover{
+
+.footer-content a:hover {
   color: #b3d9e0;
 }
-.logo-wrapper{
+
+.logo-wrapper {
   flex-grow: 2;
 }
-.footer-menu{
+
+.footer-menu {
   flex-grow: 1;
 }
-.logo{
+
+.logo {
   display: block;
-  font-size:3rem;
+  font-size: 3rem;
   font-family: 'Prata', cursive;
   letter-spacing: 6px;
   margin-bottom: 10px;
 }
-.logo .cafe-kitchen{
+
+.logo .cafe-kitchen {
   display: block;
   font-size: 1rem;
   letter-spacing: 2px;
   margin-bottom: 5px;
 }
-.sns-block{
+
+.sns-block {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.mark{
+
+.mark {
   margin-right: 1rem;
 }
-.mark img{
+
+.mark img {
   width: 30px;
 }
-.footer-menu ul li{
+
+.footer-menu ul li {
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
-.footer-menu ul li p{
+
+.footer-menu ul li p {
   margin-bottom: 20px;
 }
-.footer-menu-contents li{
+
+.footer-menu-contents li {
   padding-left: 30px;
 }
+
 .footer-menu-contents li a::before {
   content: "●";
   position: relative;
   left: -10px;
 }
-footer small{
+
+footer small {
   position: relative;
   z-index: 1;
   padding-bottom: 20px;
@@ -445,11 +528,11 @@ footer small{
 /*************************
 　ページトップへ移動するボタン
 **************************/
-#page-top a{
+#page-top a {
   display: flex;
-  justify-content:center;
-  align-items:center;
-  background:#d4dee0;
+  justify-content: center;
+  align-items: center;
+  background: #d4dee0;
   border-radius: 50%;
   border: #fff solid 2px;
   width: 90px;
@@ -457,16 +540,18 @@ footer small{
   color: #705c53;
   text-align: center;
   text-decoration: none;
-  transition:all 0.3s;
+  transition: all 0.3s;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-#page-top a:hover{
+
+#page-top a:hover {
   background: #705c53;
   color: #f5f1e8;
 }
+
 #page-top {
   position: fixed;
   right: 20px;
@@ -479,11 +564,13 @@ footer small{
   -ms-transform: translateY(120px);
   -o-transform: translateY(120px);
 }
-#page-top.moving-up{
+
+#page-top.moving-up {
   animation: UpAnime .5s forwards;
   -webkit-animation: UpAnime .5s forwards;
 }
-@keyframes UpAnime{
+
+@keyframes UpAnime {
   from {
     opacity: 0;
     transform: translateY(120px);
@@ -492,20 +579,24 @@ footer small{
     -ms-transform: translateY(120px);
     -o-transform: translateY(120px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-#page-top.moving-down{
+
+#page-top.moving-down {
   animation: DownAnime .5s forwards;
   -webkit-animation: DownAnime .5s forwards;
 }
-@keyframes DownAnime{
+
+@keyframes DownAnime {
   from {
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 1;
     transform: translateY(120px);
@@ -521,20 +612,26 @@ footer small{
 以下、スマホ用CSS
 
 **************************/
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
+
   /*************************
   共通パーツ
   **************************/
-  section{
+  section {
     overflow-x: hidden;
   }
-  h1{
+
+  h1 {
     font-size: 2.5rem;
     letter-spacing: 3px;
     text-align: center;
   }
-  #news, #menu, #store, #contact{
-    padding:60px 0;
+
+  #news,
+  #menu,
+  #store,
+  #contact {
+    padding: 60px 0;
   }
 
   /*************************
@@ -543,6 +640,7 @@ footer small{
   nav.scrolled {
     background: rgba(255, 255, 255, 0.9);
   }
+
   .g-navi {
     display: block;
     position: fixed;
@@ -557,6 +655,7 @@ footer small{
     -ms-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
   }
+
   .g-navi ul li a,
   .g-navi ul li p {
     display: block;
@@ -564,25 +663,30 @@ footer small{
     padding: 20px 0;
     letter-spacing: .25rem;
   }
+
   /* 「メニューテキスト」にマウスオンした際のデザイン */
   .g-navi ul li a:hover,
   .g-navi ul li p:hover,
-  .g-navi ul li a.scrolled:hover{
+  .g-navi ul li a.scrolled:hover {
     background: rgba(255, 255, 255, 0);
   }
+
   .g-navi ul li a.scrolled,
-  .g-navi ul li p.scrolled{
+  .g-navi ul li p.scrolled {
     display: block;
     color: #705c53;
   }
-  .g-navi ul{
+
+  .g-navi ul {
     display: block;
   }
-  .g-navi.active{
+
+  .g-navi.active {
     transform: translateY(0%);
     transition: .5s ease-in-out;
   }
-  .g-navi-sp{
+
+  .g-navi-sp {
     position: fixed;
     display: flex;
     justify-content: space-between;
@@ -593,6 +697,7 @@ footer small{
     padding: 4%;
     z-index: 3;
   }
+
   /*アコーディオンメニュー*/
   .accordion-title {
     position: relative;
@@ -602,36 +707,43 @@ footer small{
     cursor: pointer;
     padding: 20px 0 10px;
   }
+
   .accordion-title::before,
-  .accordion-title::after{
+  .accordion-title::after {
     display: none;
   }
-  ul.accordion-content{
+
+  ul.accordion-content {
     position: relative;
     z-index: 10;
     display: block;
     color: #705c53;
     width: 100%;
   }
-  .accordion-content .accordion-lists a{
-    padding: 20px 0 ;
+
+  .accordion-content .accordion-lists a {
+    padding: 20px 0;
     color: #705c53;
     text-align: center;
   }
+
   ul.accordion-content.scrolled {
     background: none;
   }
+
   .accordion-content .accordion-lists a::before {
     content: "●";
     position: relative;
     left: -5px;
   }
+
   /* ロゴエリア */
-  .sp-logo{
+  .sp-logo {
     color: #fff;
     letter-spacing: 2px;
     font-family: 'Prata', cursive;
   }
+
   /* ハンバーガーメニュー */
   .menu-trigger {
     position: relative;
@@ -639,6 +751,7 @@ footer small{
     height: 42px;
     cursor: pointer;
   }
+
   .menu-trigger span {
     display: block;
     position: absolute;
@@ -647,104 +760,125 @@ footer small{
     border-radius: 3px;
     transition: .35s ease-in-out;
   }
+
   .menu-trigger span:nth-child(1) {
     top: 6px;
   }
+
   .menu-trigger span:nth-child(2) {
     top: 18px;
   }
+
   .menu-trigger span:nth-child(3) {
     top: 30px;
   }
+
   .menu-trigger.active span:nth-child(1) {
     top: 18px;
     transform: rotate(-45deg);
   }
+
   .menu-trigger.active span:nth-child(2),
   .menu-trigger.active span:nth-child(3) {
     top: 18px;
     transform: rotate(45deg);
   }
+
   /*各子ページの背景色つきヘッダー*/
-  .header-painted .accordion-content{
+  .header-painted .accordion-content {
     background-color: rgba(255, 255, 255, 0);
   }
 
   /*************************
   メインビジュアル
   **************************/
-  #main-visual{
-    background-image:url(../image/sp/mv.png);
+  #main-visual {
+    background-image: url(../image/sp/mv.png);
     background-position: center;
     height: 85vh;
     max-height: inherit;
     padding-top: 60px;
   }
-  .mv-wrapper{
+
+  .mv-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
+
   .mv-right {
     position: relative;
     top: 0;
     right: 0;
     text-shadow: 1px 2px 10px #000;
   }
-  .text{
+
+  .text {
     font-size: 1rem;
     margin-bottom: 30px;
     letter-spacing: 2px;
     text-shadow: 1px 1px 10px #000;
   }
+
   /*************************
   NEWSエリア
   **************************/
-  .news-wrapper{
+  .news-wrapper {
     display: block;
   }
-  .news-box{
+
+  .news-box {
     width: 100%;
     margin-bottom: 20px;
     max-width: inherit;
   }
-  .news-box a{
+
+  .news-box a {
     display: flex;
   }
-  .news-image{
+
+  .news-image {
     width: 40%;
   }
-  .news-text{
+
+  .news-text {
     padding: 0 0 0 10px;
   }
-  .staff-box{
+
+  .staff-box {
     display: none;
   }
-  .staff-box.active{
+
+  .staff-box.active {
     display: block;
     background: none;
     padding: 0 2rem 2rem 2rem;
   }
-  .staff-image{
+
+  .staff-image {
     width: 100%;
     margin-bottom: 15px;
   }
-  .staff-text{
+
+  .staff-text {
     width: 100%;
     background: #fff0af;
     padding: 15px 10px 10px;
   }
-  .staff-title{
+
+  .staff-title {
     text-align: left;
     margin-bottom: 15px;
     line-height: 1.8;
   }
-  .staff-about{
+
+  .staff-about {
     margin-bottom: 10px;
     padding: 10px;
   }
-  .slide-button{
+
+  .slide-button {
     width: 30px;
     height: 30px;
   }
@@ -752,76 +886,92 @@ footer small{
   /*************************
   店舗情報エリア
   **************************/
-  .store-wrapper{
+  .store-wrapper {
     flex-wrap: wrap;
   }
-  .map-image, .cafe-text{
+
+  .map-image,
+  .cafe-text {
     flex-basis: 100%;
   }
-  .map-image{
+
+  .map-image {
     height: 200px;
     margin-bottom: 30px;
   }
-  .cafe-text{
+
+  .cafe-text {
     text-align: center;
   }
-  .store-name{
+
+  .store-name {
     margin-bottom: 20px;
   }
-  address{
+
+  address {
     line-height: 2.4;
   }
 
   /*************************
   フッターエリア
   **************************/
-  .footer-content{
+  .footer-content {
     text-align: center;
     flex-wrap: wrap;
   }
-  .logo-wrapper{
+
+  .logo-wrapper {
     flex-grow: 1;
     flex-basis: 100%;
   }
-  .logo{
+
+  .logo {
     font-size: 2rem;
     margin-bottom: 20px;
   }
-  .sns-block{
+
+  .sns-block {
     justify-content: center;
     margin-bottom: 40px;
   }
-  .footer-menu{
+
+  .footer-menu {
     flex-basis: 100%;
     margin-bottom: 20px;
   }
-  .footer-menu:last-child{
+
+  .footer-menu:last-child {
     margin-bottom: 0;
   }
-  .footer-menu ul li{
+
+  .footer-menu ul li {
     margin-bottom: 20px;
   }
-  .footer-menu ul li p{
+
+  .footer-menu ul li p {
     margin-bottom: 10px;
   }
-  .footer-menu-contents{
+
+  .footer-menu-contents {
     margin-bottom: 20px;
   }
-  ul.footer-menu-contents li{
+
+  ul.footer-menu-contents li {
     padding-left: 0;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 
   /*************************
   ページトップボタン
   **************************/
-  #page-top a{
+  #page-top a {
     width: 60px;
     height: 60px;
     font-size: .6rem;
     font-weight: bold;
     color: #705c53;
   }
+
   #page-top {
     position: fixed;
     right: 10px;
@@ -830,4 +980,5 @@ footer small{
     opacity: 0;
   }
 }
+
 /* ここまで768px以下の範囲 */

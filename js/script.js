@@ -1,5 +1,5 @@
 //スクロールでheaderに色をつける
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(this).scrollTop() > 0) {
     $('nav.g-navi,.g-navi ul li a,.g-navi ul li p').addClass('scrolled');
     $('ul.accordion-content').addClass('scrolled');
@@ -10,8 +10,8 @@ $(window).scroll(function() {
 });
 
 //スムーススクロール
-$(document).ready(function() {
-  $('nav.g-navi a[href^="#"]').click(function() {
+$(document).ready(function () {
+  $('nav.g-navi a[href^="#"]').click(function () {
     var target = $($(this).attr('href'));
     if (target.length) {
       $('html, body').animate({
@@ -23,8 +23,8 @@ $(document).ready(function() {
 });
 
 //アコーディオンメニュー
-$(document).ready(function() {
-  $('.accordion-title').click(function() {
+$(document).ready(function () {
+  $('.accordion-title').click(function () {
     $(this).toggleClass('active');
     $(this).next('.accordion-content').slideToggle();
   });
@@ -49,18 +49,18 @@ $(function () {
 //ページトップへ移動ボタン
 function PageTopAnime() {
   var scroll = $(window).scrollTop();
-  if (scroll >= 200){//200px動いた場合
+  if (scroll >= 200) {//200px動いた場合
     $('#page-top').removeClass('moving-down');
     $('#page-top').addClass('moving-up');
-  }else{
-    if($('#page-top').hasClass('moving-up')){
+  } else {
+    if ($('#page-top').hasClass('moving-up')) {
       $('#page-top').removeClass('moving-up');
       $('#page-top').addClass('moving-down');
     }
   }
 }
 // 画面をスクロールをしたら動く
-$(window).scroll(function(){
+$(window).scroll(function () {
   PageTopAnime();
 });
 
