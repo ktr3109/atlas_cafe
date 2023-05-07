@@ -34,9 +34,6 @@
     list-style-type: disc;
 }
 
-
-
-
 /*************************
 利用規約
 **************************/
@@ -64,12 +61,14 @@
     list-style-type: disc;
 }
 
-
-
 /*************************
 
 以下、スマホ用CSS
 
 **************************/
 @media screen and (max-width:768px){
+    .tos-content,
+    .privacy-content{
+        padding: 20px;
+    }
 }

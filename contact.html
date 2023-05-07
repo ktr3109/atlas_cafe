@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cafe&amp;Kitchen Atlas | Contact</title>
-  <meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。" />
-  <link rel="icon" href="favicon.ico" />
+  <title>Cafe&amp;Kitchen Atlas | CONTACT</title>
+  <meta name="description" content="都会の真ん中でほっと一息つけるをコンセプトにしたカフェです。">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/contact.css">
@@ -54,16 +54,16 @@
       <form action="index.php" method="post">
         <div class="ct-block">
           <label class="contact-text" for="name">お名前</label>
-          <input type="text" name="yourname" placeholder="例：田中太郎" class="form-name">
+          <input id="name" class="form-name" type="text" name="yourname" placeholder="例：田中太郎">
         </div>
         <div class="ct-block">
           <label class="contact-text" for="email">メールアドレス</label>
-          <input type="text" name="mail" placeholder="例：xxxxx@△△△△△.com" class="form-mail">
+          <input id="email" class="form-mail" type="text" name="mail" placeholder="例：xxxxx@△△△△△.com">
         </div>
         <div class="ct-block">
-          <label for="main" class="contact-text">主なご用件</label>
+          <label for="main-request" class="contact-text">主なご用件</label>
           <div class="cp-howto">
-            <select name="main-request" required>
+            <select id="main-request" name="main-request" required>
               <option value="" hidden>ご選択ください</option>
               <option value="1">お店の予約について</option>
               <option value="2">メニューについて</option>
@@ -73,12 +73,12 @@
           </div>
         </div>
         <div class="ct-block">
-          <label for="main" class="contact-text">ご予約希望日</label>
-          <input type="date" name="event-date" class="form-event-date">
+          <label for="event-date" class="contact-text">ご予約希望日</label>
+          <input id="event-date" class="form-event-date" type="date" name="event-date">
         </div>
         <div class="ct-block">
           <label for="request-about" class="contact-text">お問い合わせ内容</label>
-          <textarea name="request-about" id="request-about" cols="60" rows="6" placeholder="ここに記入して下さい"></textarea>
+          <textarea id="request-about" name="request-about" cols="60" rows="6" placeholder="ここに記入して下さい"></textarea>
         </div>
         <input class="send-button" type="submit" value="送信">
       </form>
@@ -117,8 +117,8 @@
         </div>
         <div class="footer-menu">
           <ul>
-            <li><a href="tos.html">利用規約</a></li>
-            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="./legal/tos.html">利用規約</a></li>
+            <li><a href="./legal/privacy.html">プライバシーポリシー</a></li>
           </ul>
         </div>
       </div>

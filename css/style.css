@@ -1,13 +1,5 @@
 @charset "UTF-8";
 /*************************
-カラーコード
-#d4dee0
-#f5f1e8
-#d7c9bc
-#705c53
-**************************/
-
-/*************************
 共通パーツ
 **************************/
 html{
@@ -87,7 +79,6 @@ header {
   width: 100%;
   z-index: 999; /* ヘッダーを最前面に表示するための設定 */
 }
-
 .g-navi-sp{
   display: none;
 }
@@ -128,7 +119,6 @@ nav.scrolled {
   display: block;
   color: #705c53;
 }
-
 /* 「メニューテキスト」にマウスオンした際のデザイン */
 .g-navi ul li a:hover,
 .g-navi ul li p:hover,
@@ -148,7 +138,6 @@ transition: 0.5s;
 -ms-transition: 0.5s;
 -o-transition: 0.5s;
 }
-
 /*アコーディオンメニュー*/
 .accordion-title {
   position: relative;
@@ -210,7 +199,6 @@ transition: 0.5s;
 .accordion-title.active::after {
   background: #fff;
   opacity: 0;
-
 }
 ul.accordion-content {
   position: absolute;
@@ -226,7 +214,6 @@ ul.accordion-content {
 }
 ul.accordion-content.scrolled {
   background: rgba(255, 255, 255, 0.6);
-
 }
 .accordion-content .accordion-lists{
   text-align: left;
@@ -293,7 +280,7 @@ ul.accordion-content.scrolled {
 }
 
 /*************************
-お知らせエリア
+NEWSエリア
 **************************/
 .news_bk{
   background-color: #d4dee0;
@@ -345,65 +332,6 @@ ul.accordion-content.scrolled {
   border-radius: 5px;
 }
 
-
-/*************************
-パッケージエリア
-**************************/
-#package{
-  background:#f6e2c1;
-}
-.package-menu{
-  flex-basis: 31%;
-}
-.package-image{
-  width: 100%;
-  border-radius: 30px;
-  margin-bottom: 20px;
-}
-.package-title{
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
-.package-value{
-  color: #401801;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-}
-.package-select{
-  width: 100%;
-  margin-bottom: 10px;
-}
-.purchase-number{
-  margin-bottom: 20px;
-}
-.number{
-  width: 50px;
-}
-.select-cart{
-  margin-bottom: 30px;
-  height: 54px;
-}
-.select-cart a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  background: #401801;
-  filter: drop-shadow(0px 4px 0px #c50000);
-  font-size: 1.25rem;
-  color: #fff;
-  margin-bottom: 4px;
-  transition: 0s;
-}
-.select-cart a:hover{
-  filter: none;
-  height: 54px;
-  margin-bottom: 0;
-  transition: 0s;
-}
-
 /*************************
 店舗(ストア)情報エリア
 **************************/
@@ -427,7 +355,6 @@ address{
 .store-address{
   color: #624649;
 }
-
 
 /*************************
 フッターエリア
@@ -516,7 +443,7 @@ footer small{
 }
 
 /*************************
-　ページトップボタン
+　ページトップへ移動するボタン
 **************************/
 #page-top a{
   display: flex;
@@ -595,7 +522,9 @@ footer small{
 
 **************************/
 @media screen and (max-width:768px){
-  /* 共通パーツ */
+  /*************************
+  共通パーツ
+  **************************/
   section{
     overflow-x: hidden;
   }
@@ -664,7 +593,6 @@ footer small{
     padding: 4%;
     z-index: 3;
   }
-
   /*アコーディオンメニュー*/
   .accordion-title {
     position: relative;
@@ -698,11 +626,8 @@ footer small{
     position: relative;
     left: -5px;
   }
-  
-
   /* ロゴエリア */
   .sp-logo{
-    /* font-size: 1.5rem; */
     color: #fff;
     letter-spacing: 2px;
     font-family: 'Prata', cursive;
@@ -740,14 +665,14 @@ footer small{
     top: 18px;
     transform: rotate(45deg);
   }
-
-  /*************************
-  　各子ページの背景色つきヘッダー
-  **************************/
+  /*各子ページの背景色つきヘッダー*/
   .header-painted .accordion-content{
     background-color: rgba(255, 255, 255, 0);
   }
-  /* メインビジュアル */
+
+  /*************************
+  メインビジュアル
+  **************************/
   #main-visual{
     background-image:url(../image/sp/mv.png);
     background-position: center;
@@ -773,8 +698,9 @@ footer small{
     letter-spacing: 2px;
     text-shadow: 1px 1px 10px #000;
   }
-
-  /* NEWSエリア */
+  /*************************
+  NEWSエリア
+  **************************/
   .news-wrapper{
     display: block;
   }
@@ -804,7 +730,6 @@ footer small{
     width: 100%;
     margin-bottom: 15px;
   }
-
   .staff-text{
     width: 100%;
     background: #fff0af;
@@ -823,31 +748,10 @@ footer small{
     width: 30px;
     height: 30px;
   }
-  /* ライフエリア */
-  .life-wrapper{
-    flex-wrap: wrap;
-  }
-  .life-type{
-    flex-basis: 47%;
-    margin-bottom: 20px;
-  }
-  .life-type a{
-    padding: 0;
-  }
 
-  /* パッケージエリア */
-  .package-wrapper{
-    flex-wrap: wrap;
-  }
-  .package-menu{
-    flex-basis: 100%;
-    margin-bottom: 60px;
-  }
-  .package-menu:last-child{
-    margin-bottom: 0;
-  }
-
-  /* 店舗情報エリア */
+  /*************************
+  店舗情報エリア
+  **************************/
   .store-wrapper{
     flex-wrap: wrap;
   }
@@ -868,7 +772,9 @@ footer small{
     line-height: 2.4;
   }
 
-  /* フッターエリア */
+  /*************************
+  フッターエリア
+  **************************/
   .footer-content{
     text-align: center;
     flex-wrap: wrap;

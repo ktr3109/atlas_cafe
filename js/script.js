@@ -46,7 +46,7 @@ $(function () {
   });
 });
 
-//ページトップボタン
+//ページトップへ移動ボタン
 function PageTopAnime() {
   var scroll = $(window).scrollTop();
   if (scroll >= 200){//200px動いた場合
@@ -74,7 +74,6 @@ $(function () {
     var $this = $(this);
     $filters.removeClass('active');
     $this.addClass('active');
-
     var $filterTime = $this.attr('data-filter');
 
     if ($filterTime == 'all') {
