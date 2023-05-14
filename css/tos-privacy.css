@@ -13,34 +13,6 @@
 }
 
 /*************************
-プライバシーポリシー
-**************************/
-#privacy {
-  background: #d4dee0;
-}
-
-#privacy h2,
-#privacy .ja-title {
-  color: #705c53;
-}
-
-.privacy-content {
-  background-color: #fff;
-  padding: 40px;
-}
-
-.privacy-content h3 {
-  margin: 40px 0 0;
-  border-bottom: 1px #d4dee0 solid;
-}
-
-.privacy-content ul li {
-  margin: 0 0 0 20px;
-  padding-left: 0;
-  list-style-type: disc;
-}
-
-/*************************
 利用規約
 **************************/
 #tos {
@@ -73,6 +45,43 @@
 }
 
 /*************************
+プライバシーポリシー
+**************************/
+#privacy {
+  background: #d4dee0;
+}
+
+#privacy h2,
+#privacy .ja-title {
+  color: #705c53;
+}
+
+.privacy-content {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.privacy-content h3 {
+  margin: 40px 0 0;
+  border-bottom: 1px #d4dee0 solid;
+}
+
+.privacy-content ul li {
+  margin: 0 0 0 20px;
+  padding-left: 0;
+  list-style-type: disc;
+}
+.personal-info{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+.personal-info li{
+  width: 30%;
+}
+
+/*************************
 
 以下、スマホ用CSS
 
@@ -82,5 +91,8 @@
   .tos-content,
   .privacy-content {
     padding: 20px;
+  }
+  .personal-info li{
+    width: 100%;
   }
 }
